@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_roles_responsibilities",
+  "info": {
+    "displayName": "Responsibility",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Value": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

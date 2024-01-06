@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_roles_roles",
+  "info": {
+    "displayName": "Role",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Value": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
