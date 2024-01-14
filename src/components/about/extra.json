@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_extras",
+  "info": {
+    "displayName": "extra",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

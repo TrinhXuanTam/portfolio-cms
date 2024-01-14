@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_about_work_experiences",
+  "info": {
+    "displayName": "Work Experience",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "date",
+      "required": true
+    },
+    "to": {
+      "type": "date"
+    }
+  }
+}

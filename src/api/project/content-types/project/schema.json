@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Name": {
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -26,7 +26,7 @@
       "required": true,
       "unique": true
     },
-    "Description": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -35,7 +35,7 @@
       "type": "richtext",
       "required": true
     },
-    "Thumbnail": {
+    "thumbnail": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -51,7 +51,7 @@
         }
       }
     },
-    "Images": {
+    "images": {
       "type": "media",
       "multiple": true,
       "required": true,
@@ -67,7 +67,7 @@
         }
       }
     },
-    "URL": {
+    "url": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -75,7 +75,7 @@
       },
       "type": "string"
     },
-    "Roles": {
+    "roles": {
       "displayName": "Role",
       "type": "component",
       "repeatable": true,
@@ -87,7 +87,7 @@
       "component": "roles.role",
       "required": true
     },
-    "Responsibilities": {
+    "responsibilities": {
       "displayName": "Responsibilities",
       "type": "component",
       "repeatable": true,
