@@ -98,6 +98,26 @@
       },
       "component": "roles.responsibilities",
       "required": true
+    },
+    "technologies": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "component": "projects.technology",
+      "required": true
+    },
+    "briefDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text",
+      "required": true
     }
   }
 }

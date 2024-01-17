@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "value": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": false
