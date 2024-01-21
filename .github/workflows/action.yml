@@ -17,13 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: create dotenv file
-      uses: iamsauravsharma/create-dotenv@v2.0.1
-      with:
-        input-prefix: ""
-        file-path: ".env"
-        output-prefix: ""
-
     - name: Login to GitHub Container Registry
       run: |
         echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | docker login ghcr.io -u ${{ github.actor }}
