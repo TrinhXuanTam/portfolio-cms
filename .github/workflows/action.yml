@@ -32,6 +32,25 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: create .env file
+      run: sudo apt-get install openssh-client
+      run: |
+        cat << EOF > .env
+        ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}
+        API_TOKEN_SALT=${{ secrets.API_TOKEN_SALT }}
+        APP_KEYS=${{ secrets.APP_KEYS }}
+        DATABASE_CLIENT=${{ secrets.DATABASE_CLIENT }}
+        DATABASE_HOST=${{ secrets.DATABASE_HOST }}
+        DATABASE_NAME=${{ secrets.DATABASE_NAME }}
+        DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}
+        DATABASE_PORT=${{ secrets.DATABASE_PORT }}
+        DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }}
+        DATABASE_SSL=${{ secrets.DATABASE_SSL }}
+        DATABASE_URL=${{ secrets.DATABASE_URL }}
+        JWT_SECRET=${{ secrets.JWT_SECRET }}
+        TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT }}
+        EOF
+
     - name: install ssh keys
       run: |
         install -m 600 -D /dev/null ~/.ssh/id_rsa
@@ -40,7 +59,7 @@ jobs:
 
     - name: connect and pull
       run: |
-        scp docker-compose.yml ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.WORK_DIR }}
+        scp docker-compose.yml .env ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.WORK_DIR }}
         ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "\
           cd ${{ secrets.WORK_DIR }} && \
           echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | docker login ghcr.io -u trinhxuantam --password-stdin && \

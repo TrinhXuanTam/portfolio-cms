@@ -3,5 +3,6 @@ version: "3"
 services:
   portfolio-crm:
     image: ghcr.io/trinhxuantam/portfolio-crm:latest
+    env_file: .env
     ports:
       - "1337:1337"
