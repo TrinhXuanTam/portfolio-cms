@@ -41,7 +41,12 @@ jobs:
     - name: connect and pull
       run: |
         scp docker-compose.yml ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.WORK_DIR }}
-        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | docker login ghcr.io -u trinhxuantam --password-stdin && docker &&  docker-compose pull && docker-compose up -d && exit"
+        ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "\
+          cd ${{ secrets.WORK_DIR }} && \
+          echo ${{ secrets.PERSONAL_ACCESS_TOKEN }} | docker login ghcr.io -u trinhxuantam --password-stdin && \
+          docker-compose pull && \
+          docker-compose up -d && \
+        exit"
 
     - name: cleanup
       run: rm -rf ~/.ssh
