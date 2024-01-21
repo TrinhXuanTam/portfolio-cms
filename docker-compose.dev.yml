@@ -1,6 +1,6 @@
 version: "3"
 services:
-  portfolio-crm:
+  portfolio-cms:
     build:
       context: .
       dockerfile: Dockerfile.dev

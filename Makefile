@@ -11,10 +11,10 @@ build:
 	docker-compose -f docker-compose.dev.yml build
 
 logs:
-	docker compose logs portfolio-crm $(args)
+	docker compose logs portfolio-cms $(args)
 
 ps:
 	docker-compose ps
 
 exec:
-	docker-compose exec portfolio-crm $(args)
+	docker-compose exec portfolio-cms $(args)
