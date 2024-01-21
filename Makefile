@@ -1,14 +1,14 @@
 up-bg:
-	docker-compose up -d
+	docker-compose -f docker-compose.dev.yml up -d
 
 up:
-	docker-compose up
+	docker-compose -f docker-compose.dev.yml up
 
 kill:
-	docker-compose kill
+	docker-compose  -f docker-compose.dev.yml kill
 
 build:
-	docker-compose build
+	docker-compose -f docker-compose.dev.yml build
 
 logs:
 	docker compose logs portfolio-crm $(args)
