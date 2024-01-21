@@ -33,7 +33,6 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: create .env file
-      run: sudo apt-get install openssh-client
       run: |
         cat << EOF > .env
         ADMIN_JWT_SECRET=${{ secrets.ADMIN_JWT_SECRET }}
