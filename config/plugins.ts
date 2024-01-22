@@ -1,16 +1,13 @@
 export default ({ env }) => ({
   upload: {
     config: {
-      provider: 'cloudinary',
+      provider: "strapi-provider-firebase-storage",
       providerOptions: {
-        cloud_name: env('CLOUDINARY_NAME'),
-        api_key: env('CLOUDINARY_KEY'),
-        api_secret: env('CLOUDINARY_SECRET'),
-      },
-      actionOptions: {
-        upload: {},
-        uploadStream: {},
-        delete: {},
+        serviceAccount: JSON.parse(env("SERVICE_ACCOUNT")),
+        // Custom bucket name
+        bucket: env("STORAGE_BUCKET_URL"),
+        sortInStorage: true, // true | false
+        debug: false, // true | false
       },
     },
   },

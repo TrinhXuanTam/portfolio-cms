@@ -52,9 +52,8 @@ jobs:
         DATABASE_URL=${{ secrets.DATABASE_URL }}
         JWT_SECRET=${{ secrets.JWT_SECRET }}
         TRANSFER_TOKEN_SALT=${{ secrets.TRANSFER_TOKEN_SALT }}
-        CLOUDINARY_NAME=${{ secrets.CLOUDINARY_NAME }}
-        CLOUDINARY_KEY=${{ secrets.CLOUDINARY_KEY }}
-        CLOUDINARY_SECRET=${{ secrets.CLOUDINARY_SECRET }}
+        STORAGE_BUCKET_URL=${{ secrets.STORAGE_BUCKET_URL }}
+        SERVICE_ACCOUNT=${{ secrets.SERVICE_ACCOUNT }}
         EOF
 
     - name: install ssh keys
