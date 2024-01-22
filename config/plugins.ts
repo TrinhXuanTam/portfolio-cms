@@ -1,3 +1,5 @@
+console.log("SERVICE_ACCOUNT", process.env.SERVICE_ACCOUNT);
+
 export default ({ env }) => ({
   upload: {
     config: {
