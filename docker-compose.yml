@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   portfolio-cms:
     image: ghcr.io/trinhxuantam/portfolio-cms:latest

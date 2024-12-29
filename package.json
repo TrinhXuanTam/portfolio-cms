@@ -6,15 +6,15 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
+    "build": "strapi build --debug",
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "4.16.2",
-    "@strapi/plugin-graphql": "^4.16.2",
-    "@strapi/plugin-i18n": "^4.15.0",
-    "@strapi/plugin-users-permissions": "^4.15.0",
-    "@strapi/strapi": "4.16.2",
+    "@strapi/plugin-cloud": "^4.25.18",
+    "@strapi/plugin-graphql": "^4.25.18",
+    "@strapi/plugin-i18n": "^4.25.18",
+    "@strapi/plugin-users-permissions": "^4.25.18",
+    "@strapi/strapi": "^4.25.18",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
