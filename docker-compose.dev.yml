@@ -27,7 +27,7 @@ services:
     ports:
       - "1337:1337"
     networks:
-      - strapi
+      - portfolio-network-dev
     depends_on:
       - portfolio-db
 
@@ -45,12 +45,11 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - strapi
+      - portfolio-network-dev
 
 volumes:
   strapi-data:
 
 networks:
-  strapi:
-    name: Strapi
-    driver: bridge
+  portfolio-network-dev:
+    name: portfolio-network-dev
